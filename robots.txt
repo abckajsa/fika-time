@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /privacy-policy.html
+Disallow: /privacy-policy
 
 Sitemap: https://fika-time.com/sitemap.xml 
