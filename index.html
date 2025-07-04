@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fika Time – Discover Swedish Fika, Coffee, and Pastry Culture</title>
+  <meta name="description" content="Fika Time is your guide to Swedish fika, coffee culture, and the best places for fika in Scandinavia. Learn, explore, and enjoy the art of fika!">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourdomain.com/index.html">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Lexend:400,700|Lora:400,700|Quicksand:400,700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fika Time – Discover Swedish Fika, Coffee, and Pastry Culture">
+  <meta property="og:description" content="Fika Time is your guide to Swedish fika, coffee culture, and the best places for fika in Scandinavia. Learn, explore, and enjoy the art of fika!">
+  <meta property="og:image" content="https://yourdomain.com/header-main.png">
+  <meta property="og:url" content="https://yourdomain.com/index.html">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fika Time – Discover Swedish Fika, Coffee, and Pastry Culture">
+  <meta name="twitter:description" content="Fika Time is your guide to Swedish fika, coffee culture, and the best places for fika in Scandinavia. Learn, explore, and enjoy the art of fika!">
+  <meta name="twitter:image" content="https://yourdomain.com/header-main.png">
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Fika Time",
+    "url": "https://yourdomain.com/",
+    "description": "Fika Time is your guide to Swedish fika, coffee culture, and the best places for fika in Scandinavia. Learn, explore, and enjoy the art of fika!",
+    "image": "https://yourdomain.com/header-main.png"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Fika Time</a>
+      <div class="dropdown">
+        <button class="menu-toggle cinnamon-bun" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+          <img src="menu-icon.svg" alt="Open main menu" width="52" height="52" />
+        </button>
+        <ul id="main-menu" class="dropdown-menu">
+          <li><a href="what-is-fika.html">What is Fika?</a></li>
+          <li><a href="fika-must-try.html">Fika Must-try</a></li>
+          <li><a href="fika-vs-afternoon-tea.html">Fika vs Afternoon Tea</a></li>
+          <li><a href="why-fika-matters.html">Why Fika Matters</a></li>
+          <li><a href="5-best-cafes-in-stockholm.html">5 Best Cafés in Stockholm</a></li>
+          <li><a href="5-best-cafes-in-helsinki.html">5 Best Cafés in Helsinki</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-image">
+        <img src="header-main.png" alt="Illustration of Swedish fika with coffee and pastries" style="width:100%;height:auto;display:block;" />
+      </div>
+      <h1>Welcome to Fika Time</h1>
+      <p>Hej and welcome to Fika Time. This is your cozy space online where we celebrate the beauty of Swedish coffee culture. Fika Time is here to inspire slower moments, thoughtful breaks, and the joy of sweet traditions. Whether you're a curious traveler or someone who just loves the idea of slowing down with coffee and something freshly baked, you're in the right place. Here you'll find stories, guides, and beautiful details from the world of fika. So make yourself a cup, grab a bun, and stay awhile. You're always welcome here.</p>
+    </section>
+    <section class="blog-module">
+      <h2 class="blog-module-title">Freshly Brewed Reads</h2>
+      <ul class="blog-list">
+        <li><a class="blog-card" href="5-best-cafes-in-helsinki.html">5 Best Cafés in Helsinki</a></li>
+        <li><a class="blog-card" href="5-best-cafes-in-stockholm.html">5 Best Cafés in Stockholm</a></li>
+        <li><a class="blog-card" href="what-is-fika.html">What is Fika?</a></li>
+        <li><a class="blog-card" href="fika-must-try.html">Fika Must-try</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Fika Time &nbsp;|&nbsp; <a href="about.html">About</a> &nbsp;|&nbsp; <a href="privacy-policy.html">Privacy Policy</a></p>
+  </footer>
+  <script>
+    // Dropdown menu toggle for mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('main-menu');
+    let hoverTimeout;
+    // Open on click for mobile
+    menuToggle.addEventListener('click', function(e) {
+      if (window.matchMedia('(hover: none)').matches) {
+        e.stopPropagation();
+        const open = menu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', open);
+      }
+    });
+    // Open on hover for desktop
+    function openMenu() {
+      if (window.matchMedia('(hover: hover)').matches) {
+        clearTimeout(hoverTimeout);
+        menu.classList.add('open');
+        menuToggle.setAttribute('aria-expanded', true);
+      }
+    }
+    function closeMenu() {
+      if (window.matchMedia('(hover: hover)').matches) {
+        hoverTimeout = setTimeout(() => {
+          menu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', false);
+        }, 120);
+      }
+    }
+    menuToggle.addEventListener('mouseenter', openMenu);
+    menuToggle.addEventListener('mouseleave', closeMenu);
+    menu.addEventListener('mouseenter', openMenu);
+    menu.addEventListener('mouseleave', closeMenu);
+    // Close on click outside
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', false);
+      }
+    });
+  </script>
+</body>
+</html> 
