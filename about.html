@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZEJ6731J1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EZEJ6731J1');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;">
   <title>About – Fika Time</title>
   <meta name="description" content="Learn about Fika Time, the site dedicated to Swedish fika, coffee, and pastry culture. Discover our mission and the creator behind the project.">
   <link rel="canonical" href="https://fika-time.com/about.html">
@@ -43,12 +53,53 @@
 <p>This site was created out of a genuine love for fika, not just the coffee and pastries, but the mindset. Fika isn't just about eating something sweet. It's about taking time. It's about catching your breath. And it's about sharing those moments with others.</p>
 <p>Here you'll find stories behind traditional fika pastries, cultural insights, comparisons (yes, fika *is* different from afternoon tea), and inspiration for embracing slow living wherever you are in the world.</p>
 <p>Want to get in touch? Whether it's a collaboration idea, a local tip, or just a contact request I'd love to hear from you.  
-Email me anytime at <a href="mailto:onfikabreak@gmail.com">onfikabreak@gmail.com</a>.</p>
+Email me anytime at <a href="mailto:onfikabreak&#64;gmail&#46;com" onclick="this.href='mailto:'+'onfikabreak'+'@'+'gmail'+'.'+'com'">onfikabreak [at] gmail [dot] com</a>.</p>
 <p>Thank you for stopping by and being part of the Fika Time journey. Hope you stay for a while, or at least until the coffee's gone.</p>
     </section>
   </main>
   <footer>
     <p>© 2025 Fika Time &nbsp;|&nbsp; <a href="about">About</a> &nbsp;|&nbsp; <a href="privacy-policy">Privacy Policy</a></p>
   </footer>
+  <script>
+    // Dropdown menu toggle for mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('main-menu');
+    let hoverTimeout;
+    // Open on click for mobile
+    menuToggle.addEventListener('click', function(e) {
+      if (window.matchMedia('(hover: none)').matches) {
+        e.stopPropagation();
+        const open = menu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', open);
+      }
+    });
+    // Open on hover for desktop
+    function openMenu() {
+      if (window.matchMedia('(hover: hover)').matches) {
+        clearTimeout(hoverTimeout);
+        menu.classList.add('open');
+        menuToggle.setAttribute('aria-expanded', true);
+      }
+    }
+    function closeMenu() {
+      if (window.matchMedia('(hover: hover)').matches) {
+        hoverTimeout = setTimeout(() => {
+          menu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', false);
+        }, 120);
+      }
+    }
+    menuToggle.addEventListener('mouseenter', openMenu);
+    menuToggle.addEventListener('mouseleave', closeMenu);
+    menu.addEventListener('mouseenter', openMenu);
+    menu.addEventListener('mouseleave', closeMenu);
+    // Close on click outside
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', false);
+      }
+    });
+  </script>
 </body>
 </html> 
