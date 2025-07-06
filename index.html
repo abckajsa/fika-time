@@ -46,84 +46,134 @@
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html" class="logo">Fika Time</a>
-      <div class="dropdown">
-        <button class="menu-toggle cinnamon-bun" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
-          <img src="menu-icon.svg" alt="Open main menu" width="52" height="52" />
-        </button>
-        <ul id="main-menu" class="dropdown-menu">
-          <li><a href="what-is-fika">What is Fika?</a></li>
-          <li><a href="fika-must-try">Fika Must-try</a></li>
-          <li><a href="fika-vs-afternoon-tea">Fika vs Afternoon Tea</a></li>
-          <li><a href="why-fika-matters">Why Fika Matters</a></li>
-          <li><a href="5-best-cafes-in-stockholm">5 Best Cafés in Stockholm</a></li>
-          <li><a href="5-best-cafes-in-helsinki">5 Best Cafés in Helsinki</a></li>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="navbar-inner">
+        <a href="https://www.fika-time.com/" class="logo"><img src="menu-icon.svg" alt="Fika Time logo" /></a>
+        <ul class="nav-menu">
+          <li class="nav-item dropdown-parent">
+            <a href="#" class="nav-link dropdown-toggle" tabindex="0">Fika 101</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.fika-time.com/what-is-fika" class="dropdown-link">What Is Fika?</a></li>
+              <li><a href="https://www.fika-time.com/why-fika-matters" class="dropdown-link">Why Fika Matters</a></li>
+              <li><a href="https://www.fika-time.com/fika-vs-afternoon-tea" class="dropdown-link">Fika vs Afternoon Tea</a></li>
+              <li><a href="https://www.fika-time.com/fika-must-try" class="dropdown-link">Fika Must-Try</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown-parent">
+            <a href="#" class="nav-link dropdown-toggle" tabindex="0">Cafés We Love</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.fika-time.com/5-best-cafes-in-stockholm" class="dropdown-link">5 Best Cafés in Stockholm</a></li>
+              <li><a href="https://www.fika-time.com/5-best-cafes-in-helsinki" class="dropdown-link">5 Best Cafés in Helsinki</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.fika-time.com/about" class="nav-link">About</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
-    <section class="hero">
-      <div class="hero-image">
-        <img src="header-main.png" alt="Illustration of Swedish fika with coffee and pastries" style="width:100%;height:auto;display:block;" />
-      </div>
-      <h1>Welcome to Fika Time</h1>
-      <p>Hej and welcome to Fika Time. This is your cozy space online where we celebrate the beauty of Swedish coffee culture. Fika Time is here to inspire slower moments, thoughtful breaks, and the joy of sweet traditions. Whether you're a curious traveler or someone who just loves the idea of slowing down with coffee and something freshly baked, you're in the right place. Here you'll find stories, guides, and beautiful details from the world of fika. So make yourself a cup, grab a bun, and stay awhile. You're always welcome here.</p>
-    </section>
+    <div class="main-hero-bg">
+      <section class="main-hero-row">
+        <div class="main-hero-text">
+          <h1>Discover Fika</h1>
+          <p>Fika Time is your go-to space for everything from Swedish cinnamon buns and classic pastries to hidden café gems in the Nordics. Whether you're curious about the meaning of fika, craving a slice of Prinsesstårta, or planning your next Nordic coffee break, you'll find ideas, stories, and sweet inspiration right here. Let's fika like locals.</p>
+        </div>
+        <div class="main-hero-image">
+          <img src="kanelbulle-cinamonbun-must-try.jpg" alt="Classic Swedish cinnamon buns for fika" />
+          <img src="chockladboll-chocolateball-must-try.jpg" alt="Swedish Chocolate balls rolled in coconut flakes" />
+        </div>
+      </section>
+    </div>
     <section class="blog-module">
-      <h2 class="blog-module-title">Freshly Brewed Reads</h2>
-      <ul class="blog-list">
-        <li><a class="blog-card" href="5-best-cafes-in-helsinki">5 Best Cafés in Helsinki</a></li>
-        <li><a class="blog-card" href="5-best-cafes-in-stockholm">5 Best Cafés in Stockholm</a></li>
-        <li><a class="blog-card" href="what-is-fika">What is Fika?</a></li>
-        <li><a class="blog-card" href="fika-must-try">Fika Must-try</a></li>
-      </ul>
+      <div class="blog-module-header">
+        <h2 class="blog-module-title">Freshly Brewed Reads</h2>
+        <p class="blog-module-subtitle">Discover the art of Swedish fika culture</p>
+      </div>
+      <div class="blog-grid">
+        <a class="blog-card" href="https://www.fika-time.com/5-best-cafes-in-helsinki">
+          <div class="blog-card-icon">☕</div>
+          <div class="blog-card-content">
+            <h3>5 Best Cafés in Helsinki</h3>
+            <p>Discover the finest fika spots in Finland's capital</p>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+        <a class="blog-card" href="https://www.fika-time.com/5-best-cafes-in-stockholm">
+          <div class="blog-card-icon">🏛️</div>
+          <div class="blog-card-content">
+            <h3>5 Best Cafés in Stockholm</h3>
+            <p>Where to find authentic Swedish fika experiences</p>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+        <a class="blog-card" href="https://www.fika-time.com/what-is-fika">
+          <div class="blog-card-icon">🍰</div>
+          <div class="blog-card-content">
+            <h3>What is Fika?</h3>
+            <p>Understanding Sweden's beloved coffee tradition</p>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+        <a class="blog-card" href="https://www.fika-time.com/fika-must-try">
+          <div class="blog-card-icon">🥨</div>
+          <div class="blog-card-content">
+            <h3>Fika Must-Try</h3>
+            <p>Essential Swedish pastries for your coffee break</p>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+      </div>
     </section>
   </main>
   <footer>
-    <p>© 2025 Fika Time &nbsp;|&nbsp; <a href="about">About</a> &nbsp;|&nbsp; <a href="privacy-policy">Privacy Policy</a></p>
+    <p>© 2025 Fika Time &nbsp;|&nbsp; <a href="https://www.fika-time.com/about">About</a> &nbsp;|&nbsp; <a href="https://www.fika-time.com/privacy-policy">Privacy Policy</a></p>
   </footer>
+  <!-- Dropdown JS for hover delay -->
   <script>
-    // Dropdown menu toggle for mobile
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.getElementById('main-menu');
-    let hoverTimeout;
-    // Open on click for mobile
-    menuToggle.addEventListener('click', function(e) {
-      if (window.matchMedia('(hover: none)').matches) {
-        e.stopPropagation();
-        const open = menu.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', open);
-      }
-    });
-    // Open on hover for desktop
-    function openMenu() {
-      if (window.matchMedia('(hover: hover)').matches) {
-        clearTimeout(hoverTimeout);
-        menu.classList.add('open');
-        menuToggle.setAttribute('aria-expanded', true);
-      }
+  document.querySelectorAll('.dropdown-parent').forEach(function(parent) {
+    let timeout;
+    let isHovering = false;
+    
+    // Function to show dropdown
+    function showDropdown() {
+      clearTimeout(timeout);
+      parent.classList.add('open');
+      isHovering = true;
     }
-    function closeMenu() {
-      if (window.matchMedia('(hover: hover)').matches) {
-        hoverTimeout = setTimeout(() => {
-          menu.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', false);
-        }, 120);
-      }
+    
+    // Function to hide dropdown with delay
+    function hideDropdown() {
+      isHovering = false;
+      timeout = setTimeout(function() {
+        if (!isHovering) {
+          parent.classList.remove('open');
+        }
+      }, 800); // 0.8 seconds delay
     }
-    menuToggle.addEventListener('mouseenter', openMenu);
-    menuToggle.addEventListener('mouseleave', closeMenu);
-    menu.addEventListener('mouseenter', openMenu);
-    menu.addEventListener('mouseleave', closeMenu);
-    // Close on click outside
-    document.addEventListener('click', function(e) {
-      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-        menu.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', false);
-      }
-    });
+    
+    // Parent hover events
+    parent.addEventListener('mouseenter', showDropdown);
+    parent.addEventListener('mouseleave', hideDropdown);
+    
+    // Dropdown menu hover events
+    const dropdown = parent.querySelector('.dropdown-menu');
+    if (dropdown) {
+      dropdown.addEventListener('mouseenter', showDropdown);
+      dropdown.addEventListener('mouseleave', hideDropdown);
+    }
+    
+    // Handle focus events for keyboard navigation
+    const toggle = parent.querySelector('.dropdown-toggle');
+    if (toggle) {
+      toggle.addEventListener('focus', showDropdown);
+      toggle.addEventListener('blur', function() {
+        // Small delay to allow clicking on dropdown items
+        setTimeout(hideDropdown, 100);
+      });
+    }
+  });
   </script>
 </body>
 </html> 
